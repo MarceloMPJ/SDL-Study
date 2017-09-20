@@ -102,8 +102,8 @@ void circBrasenham(SDL_Surface* surface, int xc, int yc, int r, int corR, int co
 void desenhaLinha(SDL_Surface* surface, int corR, int corG, int corB) {
   int xi, yi, xf,yf;
 
-  xi = rand()%SCREEN_WIDTH;
-  yi = rand()%SCREEN_HEIGHT;
+  xi = rand()%(SCREEN_WIDTH-1);
+  yi = rand()%(SCREEN_HEIGHT-1);
   xf = rand()%SCREEN_WIDTH;
   yf = rand()%SCREEN_HEIGHT;
 
@@ -113,9 +113,9 @@ void desenhaLinha(SDL_Surface* surface, int corR, int corG, int corB) {
 void desenhaCirculo(SDL_Surface* surface, int corR, int corG, int corB) {
   int xc, yc, r;
 
-  xc = rand()%SCREEN_WIDTH;
-  yc = rand()%SCREEN_HEIGHT;
-  r = rand()%200;
+  r = rand()%(SCREEN_WIDTH/2);
+  xc = rand()%(SCREEN_WIDTH - r);
+  yc = rand()%(SCREEN_HEIGHT - r);
 
   circBrasenham(surface, xc, yc, r, corR, corG, corB);
 }
@@ -136,7 +136,7 @@ void desenhaLinhaOuCirculo(SDL_Surface* surface) {
     }
 
     SDL_UpdateWindowSurface(window);
-    SDL_Delay(200);  
+    SDL_Delay(1000);  
   }
 }
 
