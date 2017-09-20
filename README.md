@@ -1,6 +1,8 @@
 # SDL-Study
 Códigos que desenvolvi estudando SDL
 
+------
+
 ### Primeiro Programa
 
 Desenvolva um programa em C++ com SDL que apresente uma tela  branca e que permita que o usuário mova um quadradro preto de 8x8 pixels por meio de teclas do teclado, deixando um rastro. As teclas a serem usadas são as seguintes:
@@ -10,6 +12,8 @@ Desenvolva um programa em C++ com SDL que apresente uma tela  branca e que permi
    6 e d/D - move para direita
    5 e s/S - limpa o desenho (pinta de branco a tela)
    ESC - encerra a aplicação.
+
+------
 
 ### Segundo Programa
 
